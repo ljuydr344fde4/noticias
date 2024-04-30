@@ -44,6 +44,7 @@ header button{
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 
 }
 
@@ -71,17 +72,22 @@ header nav button{
     margin-left: flex-end;
     margin-bottom: 4rem;
 }
+header .mobile a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  header .desktop {
+    display: none;
+  }
 main {
-    max-width: 110px;
+    max-width: 1110px;
     margin-inline: auto;
 }
 
-header .mobile a {
-  text-decoration: none;
-  color: var(--dark-blue);
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-}
+
 .primeira-secao {
     margin-bottom: 4rem;
 }
@@ -179,6 +185,9 @@ header .mobile a {
     line-height: 1.5rem;
     margin-block: 0.6rem;
 }
+.terceira-secao h2 {
+    text-decoration: none;
+}
 
 .terceira-secao  p {
     font-size: 0.9375rem;
@@ -187,16 +196,7 @@ header .mobile a {
 }
 
 @media(min-width: 1110px) {
-     main {
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr;   
-       gap: 1.75rem;  
-    }
-    
-    .primeira-secao {
-        grid-column: 1 / 3;
-    }
-    
+   
      header > button {
         display: none;
     }
@@ -212,4 +212,47 @@ header .mobile a {
         text-decoration: none;
         color: var(--gunmetal);
     }
+     header .desktop a:hover {
+        color: var(--veraillion);
+     }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;   
+        gap: 1.75rem;  
+     }
+     
+     .primeira-secao {
+         grid-column: 1 / 3;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 1.75rem;
+     }
+ 
+     .primeira-secao picture {
+         grid-column: 1 / 3;
+     }
+ 
+     .primeira-secao img {
+         margin: 0;
+     }
+     .primeira-secao h1 {
+         font-size: 3.5rem;
+     }
+
+     .primeira-secao button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
+     }
+
+     .segunda-secao h2 {
+         font-size: 2.5rem;
+     }
+     .terceira-secao {
+        display: flex;
+        grid-column: 1 / 4;
+     }
+
+     .terceira-secao a:hover {
+        color: var(--veraillion);
+     }
 }
