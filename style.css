@@ -14,6 +14,8 @@
     --silver: #C5C6CE;
     --grey21: #363636;
     --grey11: #1c1c1c;
+    --Red: #FF0000;
+    --DimGray: #696969;
 }
 
 body {
@@ -83,7 +85,7 @@ header .mobile a {
   }
 
 header .mobile a:hover {
-    color: var(--veraillion);
+    color: var(--DimGray);
  }
   
 
@@ -95,16 +97,17 @@ main {
     margin-inline: auto;
 }
 
-
 .primeira-secao {
     margin-bottom: 4rem;
     
 }
 
-.primeira-secao iframe{
-    width: 100%;
-    margin-bottom: 1.5rem;
+#video.primeira-secao iframe{
+    width: 180% ;
+    margin-bottom: 2.5rem ;
+    border: 0;
 }
+
 .primeira-secao h1 {
   font-size: 2.5rem;
   line-height: 100%;
@@ -116,8 +119,9 @@ main {
 .primeira-secao p {
     font-size: 0.9375;
     line-height: 1.625;
-    color: var(--gunmetal);
+    color: var(--almost-white);
     margin-bottom: 1.5rem;
+    width: 180%;
 }
 
 .primeira-secao button {
@@ -133,8 +137,9 @@ main {
     
 }
 
+
 .segunda-secao {
-   background-color: var(--dark-blue);
+   background-color: var(--grey11);
    margin-bottom: 4rem;
    padding: 1.5rem 1.1rem;
 }
@@ -147,7 +152,7 @@ main {
 
 
 .segunda-secao h2 {
-    color: var(--yellow);
+    color: var(--Red);
     font-size: 2rem;
     line-height: 100%;
     margin-bottom: 2.2rem;
@@ -216,11 +221,13 @@ main {
     }
     
     header .desktop a {
+
         font-size: 0.9375rem;
         line-height: 1.625rem;
         text-decoration: none;
         color: var(--silver);
     }
+    
      header .desktop a:hover {
         color: var(--gunmetal);
      }
@@ -260,7 +267,7 @@ main {
      .terceira-secao {
         display: flex;
         grid-column: 1 / 4;
-        background-color: var(--grey11);
+        background-color: var(--grey21);
         width: 100%;
        
      }

@@ -16,31 +16,18 @@ function fecharMenu() {
   nav.classList.remove("abrir");
 }
 
-const scene = new THREE.Scene();
+// Seleciona todos os links dentro da terceira seção
+const linksTerceiraSecao = document.querySelectorAll('.terceira-secao a');
 
-// Criar câmera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
+// Adiciona um event listener para cada link
+linksTerceiraSecao.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        // Muda a cor do texto do link ao passar o mouse sobre ele
+        link.style.color = 'red'; // Altere a cor desejada aqui
+    });
 
-// Criar renderizador
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-// Adicionar uma geometria
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-// Atualizar cena
-const animate = function () {
-    requestAnimationFrame(animate);
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-};
-
-animate();
+    // Define o evento de mouseleave para restaurar a cor original quando o mouse sai do link
+    link.addEventListener('mouseleave', () => {
+        link.style.color = 'var(--silver)'; // Restaura a cor original
+    });
+});
