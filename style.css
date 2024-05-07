@@ -12,12 +12,13 @@
     --veraillion: #F15051;
     --yellow: #E9AA52;
     --silver: #C5C6CE;
-
+    --grey21: #363636;
+    --grey11: #1c1c1c;
 }
 
 body {
     padding: 1.75rem 1rem;
-    background-color: var(--almost-white);
+    background-color: var(--grey21);
 }
 
 body.escurecer::before {
@@ -50,7 +51,7 @@ header button{
 
 header nav.mobile {
     position: fixed;
-    background-color: var(--almost-white);
+    background-color: var(--silver);
     right: -16rem;
     top: 0;
     height: 100vh;
@@ -68,9 +69,11 @@ header nav.mobile {
 header nav.mobile.abrir{
     right: 0;
 }
+
 header nav button{
     margin-left: flex-end;
     margin-bottom: 4rem;
+   
 }
 header .mobile a {
     text-decoration: none;
@@ -78,6 +81,11 @@ header .mobile a {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
+
+header .mobile a:hover {
+    color: var(--veraillion);
+ }
+  
 
   header .desktop {
     display: none;
@@ -90,16 +98,17 @@ main {
 
 .primeira-secao {
     margin-bottom: 4rem;
+    
 }
 
-.primeira-secao img{
+.primeira-secao iframe{
     width: 100%;
     margin-bottom: 1.5rem;
 }
 .primeira-secao h1 {
   font-size: 2.5rem;
   line-height: 100%;
-  color: var(--dark-blue);
+  color: var(--silver);
   margin-bottom: 1rem;
 
 }
@@ -168,7 +177,7 @@ main {
    margin-bottom: 2rem;
 }
 
-.terceira-secao img {
+.terceira-secao iframe {
     max-width: 6.25rem;
 }
 
@@ -179,7 +188,7 @@ main {
 }
 
 .terceira-secao h2 {
-    color: var(--dark-blue);
+    color: var(--silver);
     font-size: 1.125rem;
     font-weight: 800;
     line-height: 1.5rem;
@@ -192,7 +201,7 @@ main {
 .terceira-secao  p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
-    color: var(--gunmetal);
+    color: var(--almost-white);
 }
 
 @media(min-width: 1110px) {
@@ -210,11 +219,12 @@ main {
         font-size: 0.9375rem;
         line-height: 1.625rem;
         text-decoration: none;
-        color: var(--gunmetal);
+        color: var(--silver);
     }
      header .desktop a:hover {
-        color: var(--veraillion);
+        color: var(--gunmetal);
      }
+      
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;   
@@ -250,6 +260,9 @@ main {
      .terceira-secao {
         display: flex;
         grid-column: 1 / 4;
+        background-color: var(--grey11);
+        width: 100%;
+       
      }
 
      .terceira-secao a:hover {

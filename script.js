@@ -15,4 +15,14 @@ function fecharMenu() {
   body.classList.remove("escurecer");
   nav.classList.remove("abrir");
 }
+var iframe = document.getElementById('video');
 
+// Função para reiniciar o vídeo quando terminar
+function restartVideo() {
+    iframe.src = iframe.src; // Reinicia o vídeo
+}
+
+// Adiciona um ouvinte de evento para quando o vídeo terminar
+iframe.addEventListener('load', function() {
+    iframe.contentWindow.document.querySelector('video').addEventListener('ended', restartVideo);
+});
