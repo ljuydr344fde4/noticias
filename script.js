@@ -15,19 +15,17 @@ function fecharMenu() {
   body.classList.remove("escurecer");
   nav.classList.remove("abrir");
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const vejaMaisButton = document.querySelector('.veja-mais');
+  const descricao = document.querySelector('.descricao');
+  const fecharButton = document.querySelector('.fechar');
 
-// Seleciona todos os links dentro da terceira seção
-const linksTerceiraSecao = document.querySelectorAll('.terceira-secao a');
+  vejaMaisButton.addEventListener('click', function() {
+      descricao.style.display = 'block';
+  });
 
-// Adiciona um event listener para cada link
-linksTerceiraSecao.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        // Muda a cor do texto do link ao passar o mouse sobre ele
-        link.style.color = 'red'; // Altere a cor desejada aqui
-    });
-
-    // Define o evento de mouseleave para restaurar a cor original quando o mouse sai do link
-    link.addEventListener('mouseleave', () => {
-        link.style.color = 'var(--silver)'; // Restaura a cor original
-    });
+  fecharButton.addEventListener('click', function() {
+      descricao.style.display = 'none';
+  });
 });
+
