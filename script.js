@@ -29,3 +29,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const vejaMaisButton = document.querySelector('.veja-mais');
+  const descricao = document.querySelector('.descricao');
+  const descricaoOverlay = document.querySelector('.descricao-overlay');
+  const fecharButton = document.querySelector('.fechar');
+  const body = document.querySelector('body');
+
+  vejaMaisButton.addEventListener('click', function() {
+      descricao.style.display = 'block';
+      descricaoOverlay.style.display = 'block';
+      body.classList.add('body-escurecido'); // Adiciona classe para escurecer o fundo
+  });
+
+  fecharButton.addEventListener('click', function() {
+      descricao.style.display = 'none';
+      descricaoOverlay.style.display = 'none';
+      body.classList.remove('body-escurecido'); // Remove classe para escurecer o fundo
+  });
+});
+
